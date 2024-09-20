@@ -20,6 +20,8 @@
 
 int main(int argc, char** argv) {
     // MD5 hashes are always 16 bytes long (independent of length)
+    printf("in: %s, len: %ld \n", argv[1], strlen(argv[1]));
+
     unsigned char hash[16];
     MD5(argv[1], strlen(argv[1]), hash); // result stored in hash
     for(int i = 0; i < 16; i += 1) {
